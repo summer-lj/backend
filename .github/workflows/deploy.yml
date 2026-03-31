@@ -86,6 +86,7 @@ jobs:
             IMAGE_REPOSITORY=${{ env.IMAGE_REPOSITORY }}
             IMAGE_TAG=${{ needs.build-and-push.outputs.image_tag }}
             HOST_API_PORT=3001
+            AUTO_SEED=true
             POSTGRES_DB=${{ secrets.STAGING_POSTGRES_DB }}
             POSTGRES_USER=${{ secrets.STAGING_POSTGRES_USER }}
             POSTGRES_PASSWORD=${{ secrets.STAGING_POSTGRES_PASSWORD }}
@@ -101,7 +102,6 @@ jobs:
             LOG_LEVEL=info
             TRUST_PROXY=true
             SWAGGER_ENABLED=true
-            AUTO_SEED=true
             CORS_ORIGINS=${{ secrets.STAGING_CORS_ORIGINS }}
             POSTGRES_DB=${{ secrets.STAGING_POSTGRES_DB }}
             POSTGRES_USER=${{ secrets.STAGING_POSTGRES_USER }}
@@ -151,6 +151,7 @@ jobs:
             IMAGE_REPOSITORY=${{ env.IMAGE_REPOSITORY }}
             IMAGE_TAG=${{ github.event.inputs.image_tag }}
             HOST_API_PORT=3000
+            AUTO_SEED=false
             POSTGRES_DB=${{ secrets.PRODUCTION_POSTGRES_DB }}
             POSTGRES_USER=${{ secrets.PRODUCTION_POSTGRES_USER }}
             POSTGRES_PASSWORD=${{ secrets.PRODUCTION_POSTGRES_PASSWORD }}
@@ -166,7 +167,6 @@ jobs:
             LOG_LEVEL=info
             TRUST_PROXY=true
             SWAGGER_ENABLED=true
-            AUTO_SEED=false
             CORS_ORIGINS=${{ secrets.PRODUCTION_CORS_ORIGINS }}
             POSTGRES_DB=${{ secrets.PRODUCTION_POSTGRES_DB }}
             POSTGRES_USER=${{ secrets.PRODUCTION_POSTGRES_USER }}
