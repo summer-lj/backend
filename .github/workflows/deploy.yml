@@ -101,6 +101,7 @@ jobs:
             LOG_LEVEL=info
             TRUST_PROXY=true
             SWAGGER_ENABLED=true
+            AUTO_SEED=true
             CORS_ORIGINS=${{ secrets.STAGING_CORS_ORIGINS }}
             POSTGRES_DB=${{ secrets.STAGING_POSTGRES_DB }}
             POSTGRES_USER=${{ secrets.STAGING_POSTGRES_USER }}
@@ -165,6 +166,7 @@ jobs:
             LOG_LEVEL=info
             TRUST_PROXY=true
             SWAGGER_ENABLED=true
+            AUTO_SEED=false
             CORS_ORIGINS=${{ secrets.PRODUCTION_CORS_ORIGINS }}
             POSTGRES_DB=${{ secrets.PRODUCTION_POSTGRES_DB }}
             POSTGRES_USER=${{ secrets.PRODUCTION_POSTGRES_USER }}
