@@ -4,6 +4,7 @@ RUN apk add --no-cache bash openssl netcat-openbsd
 
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 WORKDIR /workspace
 
 RUN corepack enable
